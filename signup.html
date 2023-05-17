@@ -29,22 +29,27 @@
             background-color: rgb(171, 15, 15);
             color: rgb(168, 168, 22);
         }
+        input{
+            outline: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" onkeyup="matchPassword()">
         <h3>SignUp</h3>
         <div>
             Email : <input type="email" id="signupname" required> 
         </div>
         <br> <br>
         <div>
-            Create Password: <input type="password" id="signupPassword" required>
+            Create Password: <input type="password" id="signupPassword" required style="border: 3px solid white; outline: none;">
         </div> <br><br>
        <div>
-        Re-type Password: <input type="password" required>
+        Re-type Password: <input type="password" id="resignupPassword" required style="border: 3px solid white; outline: none;">
        </div> <br><br>
-<a href="./login.html"><button onclick="submitbtn()">Submit</button></a>
+<div id="signuplink" style="display: none;">
+    <a href="./login.html"><button onclick="submitbtn()">Submit</button></a>
+</div>
     <script src="app.js"></script>
 </body>
 </html>
