@@ -34,3 +34,17 @@ function loginbtn(){
         document.getElementById('user_pass').style.borderColor='red' 
     }
 }
+function matchPassword(){
+    var password = document.getElementById('signupPassword').value;
+    var repassword = document.getElementById('resignupPassword').value;
+    if(password==repassword){
+        document.getElementById('signuplink').style.display='block'
+        document.getElementById('resignupPassword').style.borderColor='green'
+        // console.log('s')
+    }else{
+        document.getElementById('signuplink').style.display='none' 
+        document.getElementById('resignupPassword').style.borderColor='red'
+        // console.log('f')
+    }
+    
+}
